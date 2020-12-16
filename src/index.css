@@ -25,7 +25,7 @@ body {
   text-align: center;
 }
 .btn-cotnainer {
-  width: 40%;
+  width: 20%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -44,12 +44,34 @@ body {
   letter-spacing: 3px;
 }
 .image {
-  width: 200px;
+  width: 250px;
+  height: 200px;
+  border: 8px solid rgb(143, 129, 47);
+  border-radius: 10px;
+  float: left;
+  margin-right: 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(143, 129, 47);
+  margin-bottom: 1vh;
+  border-bottom: 1px dotted grey;
+  padding-bottom: 10px;
+}
+.header-title {
+  color: black;
+  text-transform: capitalize;
+}
+.article {
+  width: 600px;
+  height: 200px;
+  display: flex;
 }
 .menus-content {
   display: grid;
   margin-top: 5vh;
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: repeat(2, 600px);
   grid-gap: 100px;
   justify-content: center;
 }

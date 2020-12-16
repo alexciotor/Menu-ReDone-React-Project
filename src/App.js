@@ -3,14 +3,27 @@
  import Button from './Button'; 
  import data from './data'
  
- const allButtons = ['all',...new Set(data.map((item)=>{
+ const allButtons = ['all' , ...new Set(data.map((item)=>{
    return item.category
  }))]
- 
+
 function App() {
+
 const [menu, setMenu] = useState(data)
 const [button, setButton] = useState(allButtons) 
+const buttonUsage = (category)=>{
+  if(category ==='all'){
+  setMenu(data)
+  return
+  }
+const otherButtons =data.filter(item=>{
+  if(category===item.category){
+    return item.category
+  }
+})
+setMenu(otherButtons)
 
+}
   return (
     <section className="main-section">
     <div className="title">
@@ -20,7 +33,7 @@ const [button, setButton] = useState(allButtons)
     
 <div className="menu-content">
 
-<Button button = {button} />
+<Button button = {button} buttonUsage={buttonUsage} />
 <Menu menu = {menu} />
 </div>
 
